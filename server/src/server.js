@@ -2,8 +2,8 @@ var http = require('http'),
     maybe = require('./maybe');
 
 var cfg = {
-    host: 'localhost',
-    port: 8080
+    host: '0.0.0.0',
+    port: process.env.PORT || process.env.C9_PORT || 8118
 };
 
 http.createServer(function (req, res) {
